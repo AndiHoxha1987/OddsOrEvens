@@ -1,0 +1,47 @@
+import java.util.*;
+public class Module2OddsAndEvens {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Let’s play a game called “Odds and Evens”");
+        System.out.print("What is your name?");
+        String nam = input.next();
+        System.out.print("Hi " +nam +", which do you choose? (O)dds or (E)vens?");
+        String side = input.next();
+        if(side.equals("o")){
+            System.out.println(nam +" has picked odds! The computer will be evens.");
+        }else if(side.equals("e")){
+            System.out.println(nam +" has picked evens! The computer will be odds.");
+        }
+        System.out.println("---------------------------------");
+        System.out.print("How many “fingers” do you put out?");
+        int numb = input.nextInt();
+        Random rand = new Random();
+        int computer = rand.nextInt(6);
+        System.out.println("The computer plays "+computer +" \"fingers\".");
+        System.out.println("---------------------------------");
+        int sum = numb+computer;
+        System.out.println(numb +" + " + computer +" = "+sum);
+        if(sum%2==0){
+            System.out.println(sum +" is ...even!");
+        }else {
+            System.out.println(sum + " is ...odd!");
+        }
+         if(sum%2==0){
+             if(side.equals("o")){
+                 System.out.println("That means computer wins" );
+             }else{
+                 System.out.println("That means "+nam +" wins");
+             }
+         }else {
+             if(side.equals("o")){
+                 System.out.println("That means "+nam +" wins");
+             }else{
+                 System.out.println("That means computer wins" );
+             }
+
+        }System.out.println("---------------------------------");
+
+
+    }
+}
+
